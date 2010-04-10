@@ -1,0 +1,184 @@
+\documentclass{beamer}
+% This is the file main.tex
+\usetheme{Berlin}
+\title{Building Pluggable Web Applications using django}
+\author{Lakshman Prasad}
+\institute{Great Indian Developer Summit}
+\subtitle{Agiliq Solutions}
+\date{April 21, 2010}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  \inserttitlegraphic
+\end{frame}
+
+\section{Introduction}
+	\begin{frame}
+	{Python Framework}
+	For building database driven web applications
+	Emphasising Reuse and DRY
+	\end{frame}
+	\subsection{A Case Study: Youtube Stars}
+		\begin{frame}
+			{Install a pluggable app \alert{django-star-rating} }
+		\end{frame}
+		\begin{frame}
+			{Point to an url pattern}
+		\end{frame}
+		\begin{frame}
+			{Put the template where you want!}
+		\end{frame}
+	\begin{frame}
+	  \tableofcontents
+	 \end{frame}
+	\subsection{Overview}
+		\begin{frame}
+			{Developed at Lawrence-Journal World}
+			insert adrian-simon-jacob picture here
+			To meet fast journalist demands
+		\end{frame}
+		\begin{frame}
+			{~5 years since Open Source}
+		\end{frame}
+		\begin{frame}
+			{~5 million hits per month}
+		\end{frame}
+		\begin{frame}
+			{~600 contributors}
+		\end{frame}
+		\begin{frame}
+			{Make development fast}
+		\end{frame}
+		\begin{frame}
+			{Automate repetitive tasks}
+		\end{frame}
+	
+\section{Using django}
+	\subsection{MTV}
+		\begin{frame}
+			{Model Syntax}
+		\end{frame}
+		\begin{frame}
+			{Admin by models alone}
+		\end{frame}
+		\begin{frame}
+			{Ugly urls}
+		\end{frame}
+		\begin{frame}
+			{Good urls}
+		\end{frame}
+		\begin{frame}
+			{django url pattern}
+		\end{frame}
+		\begin{frame}
+			{View image}
+		\end{frame}
+		\begin{frame}
+			{View code}
+		\end{frame}
+		\begin{frame}
+			{Template image}
+		\end{frame}
+		\begin{frame}
+			{Template code}
+		\end{frame}
+
+
+
+\section{Features of django}
+	\subsection{Features}
+		\begin{frame}
+		\begin{itemize}                                    \item
+			Admin Interface                         \pause \item
+			Generic views                           \pause \item
+			Testing tools                           \pause \item
+			sessions                                \pause \item
+			Authentication                          \pause \item
+			Caching                                 \pause \item
+			Internationalization                    \pause \item
+			RSS                                     \pause \item
+			CSRF protection                         \pause \item
+			File Storage                            \pause \item
+			Documentation page screenshot
+		\end{itemize}
+		\end{frame}
+
+\section{Reuseable apps}
+	\subsection{Writing reuseable apps}
+		\begin{frame}
+			General conventions adopted by the community
+		\end{frame}
+		\begin{frame}
+			{High Level}                                        
+		\begin{itemize}                                                    \item
+			Use template tags                                       \pause \item
+			Use signals                             
+		\end{itemize}
+		\end{frame}
+		\begin{frame}
+			{Basics}                                                       
+		\begin{itemize}                                                    \item
+			Take templatename and extracontext every where          \pause \item
+			Write urls in applications                              \pause \item
+			Import from the application level                       \pause \item
+			Prefix template name with directory                     \pause \item
+			Use MEDIAURL in templates                              \pause \item
+			Reverse url patterns
+		\end{itemize}
+		\end{frame}
+		\begin{frame}
+			{Advanced}                              
+			Use Template Response
+		\end{frame}
+		
+	\subsection{Community Applications}
+		\begin{frame}
+			{There is an app for that}
+		\end{frame}
+		\begin{frame}
+			{For every size and style}
+		\end{frame}
+		\begin{frame}
+			{Pinax}
+		\end{frame}
+		\begin{frame}
+			{django-mingus}
+		\end{frame}
+
+\section{End Notes}
+	\subsection{Django Stats}
+		\begin{frame}
+			{Django users}
+		\end{frame}
+		\begin{frame}
+			{App count "django-"}
+		\end{frame}
+		\begin{frame}
+			{Media}
+			LA Times,
+			NY Times,
+			Washington Post,
+			Guardian.
+			Mahalo: 10 million Page views
+		\end{frame}
+		\begin{frame}
+			{NASA}
+			"quote"
+		\end{frame}
+	\subsection{Other}
+		\begin{frame}
+			{About Me}
+		\end{frame}
+		\begin{frame}
+			{Image Attributions}
+		\end{frame}
+		\begin{frame}
+			?
+		\end{frame}
+
+
+
+
+\end{document}
