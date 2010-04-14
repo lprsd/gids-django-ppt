@@ -1,6 +1,11 @@
-{% block ratings %}
-    {% if not user.is_authenticated %}		
+{% extends "base.html" %}
+{% block body %}
+    {% if user.is_authenticated %}
+        Welcome {{user.get_full_name}}
+    {% else %}
+        {% include "login.html" %}
     {% endif %}
-	{% starrating  %}
-{% endblock %}
 
+...
+
+{% endblock %}

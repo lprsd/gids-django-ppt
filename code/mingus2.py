@@ -1,16 +1,3 @@
-django_extensions
-basic
-flatblocks
-disqus
-navbar
-djangodblog
-sorl
-oembded
-template_utils
-django_proxy
-compressor
-django_markup
-google_analytics
 view_cache_utils
 contact_form
 honeypot

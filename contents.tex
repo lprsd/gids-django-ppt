@@ -61,6 +61,8 @@
 
 \section{Introduction}
 	\subsection{Definition}
+		{\setbeamertemplate{background canvas}{
+		\includegraphics [width=\paperwidth,height=\paperheight]{images/pony.jpg}} 
 		\begin{frame}
 			{\includegraphics[height=1cm]{images/django.png}\linebreak
 				\includegraphics[height=1cm]{images/python-logo.png}}
@@ -69,12 +71,11 @@
 			Emphasis on Reuse, DRY and simplicity
 		\end{itemize}
 		\end{frame}
+		}
 	\subsection{A Case Study: Youtube Stars}
 		\begin{frame}
 			{Hypothetical Application}
-			\begin{center}
-				\includegraphics[height=1cm]{images/python-logo.png}
-			\end{center}		
+			\img{amazonscreen2.jpg}
 		\end{frame}
 		\begin{frame}[fragile]
 			{Install a pluggable app \alert{django-star-rating} }
@@ -90,10 +91,15 @@
 				 \lstinputlisting{code/urls.py}
 		\end{frame}
 		\begin{frame}
-			{Put the template where you want!}
+			{Put the rating where you want!}
 			\lstset{language=html}			
-				 \lstinputlisting{code/template.html}			
+				 \lstinputlisting{code/rating.html}			
 		\end{frame}
+		\begin{frame}
+			{Thats it!}
+			\img{umoja2.jpg}
+		\end{frame}
+		
 	\begin{frame}
 	  \tableofcontents
 	 \end{frame}
@@ -135,16 +141,16 @@
 			\pycodesm{model_api.py}
 		\end{frame}
 		\begin{frame}
-			{Admin Syntax}
-			\pycodesm{admin.py}
-		\end{frame}		
-		\begin{frame}
 			{Admin by models alone}
 			\img{admin.png}
 		\end{frame}
+		\begin{frame}
+			{Admin Syntax}
+			\pycodesm{admin.py}
+		\end{frame}		
 		\imgslide{admin1.jpg}{List Page}
 		\imgslide{admin2.jpg}{Add an Entry}
-		\imgslide{admin3.jpg}{Auto Validation}
+		\imgslide{admin4.jpg}{Auto Validation}
 		\begin{frame}
 			{Ugly urls}
 			\pycode{uglyurl.txt}
@@ -169,7 +175,7 @@
 		\imgslide{template.jpg}{Templates}
 		\begin{frame}
 			{django template}
-			\htmlcodesm{index.html}
+			\htmlcodesm{template.html}
 		\end{frame}
 
 
@@ -191,19 +197,21 @@
 			File Storage                            
 		\end{itemize}
 		\end{frame}
-		\imgslide{docs.png}{Django Documentation}
+		\imgslide{djangodoc2.jpg}{Django Documentation}
 
 \section{Reuseable apps}
 	\subsection{Writing reuseable apps}
 		\begin{frame}
-			General conventions adopted by the community
+			{General conventions adopted by the community}
+			\img{keepleft.jpg}
 		\end{frame}
-		\begin{frame}[<+-| alert@+>]
-			{High Level}                                        
-		\begin{itemize}                                                    \item
-			Use template tags                                              \item
-			Use signals                             
-		\end{itemize}
+		\begin{frame}[fragile]
+			{Use template tags}                                              
+			\pycodesm{templatetag.py}
+		\end{frame}
+		\begin{frame}
+			{Use Signals}                                              
+			\pycodesm{signals.py}
 		\end{frame}
 		\begin{frame}[fragile]
 			{Basics}                                                       
@@ -215,6 +223,10 @@
 			Use \verb|MEDIA_URL| in templates                        \item
 			Reverse url patterns
 		\end{itemize}
+		\end{frame}
+		\begin{frame}
+		{Basics Done right}
+			\pycodesm{basicright.py}
 		\end{frame}
 		\begin{frame}
 			{Advanced}                              
@@ -231,25 +243,72 @@
 		\imgslide{choices.jpg}{For every size and style}
 		\begin{frame}
 			{Github Search "django"}
-			~3000 repositories!
+			\img{3000.jpg}
 		\end{frame}
 		\begin{frame}
-			{Pinax}
-			\img{pinax2.png}
+			\img{pinax2.jpg}
+		\end{frame}
+		\begin{frame}
+			{Pinax Features}
+\begin{itemize}
+\item
+openid support
+\item
+email verification
+\item
+password management
+\item
+site announcements
+\item
+a notification framework
+\item
+user-to-user messaging
+\item
+friend invitation (both internal and external to the site)
+\item
+a basic twitter clone
+\item
+oembed support
+\item
+gravatar support
+\item
+interest groups (called tribes)
+\item
+projects with basic task and issue management
+\item
+threaded discussions
+\item
+wikis with multiple markup support
+\item
+blogging
+\item
+bookmarks
+\item
+tagging
+\item
+contact import (from vCard, Google or Yahoo)
+\item
+photo management
+\end{itemize}
 		\end{frame}
 		\begin{frame}
 			{django-mingus}
-			\pycodesm{mingus.py}
+			\begin{columns}
+			\begin{column}{5cm}
+				\pycodesm{mingus.py}
+			\end{column}
+			\begin{column}{5cm}
+				\pycodesm{mingus2.py}
+			\end{column}
+			\end{columns}
 		\end{frame}
 
 \section{End Notes}
 	\subsection{Django Stats}
-		\begin{frame}
-			{Django users}
-		\end{frame}
+			\imgslide{users.jpg}{Django users}
 		\begin{frame}
 		{Popular Users}
-		\begin{itemize}[<+-| alert@+>]
+		\begin{itemize}
 		 \item                                                 
 			Media
 			\begin{itemize}
@@ -260,35 +319,39 @@
 				 \item
 				Washington Post
 				 \item
-				Guardian.
+				Guardian
 			\end{itemize}
-		 \item
+		 \pause \item
 			Web2.0
 			\begin{itemize}            
 				\item 
 				Mahalo: 10 million Page views            
 				\item
-				Pownce
+				Pownce, SixApart				
 			\end{itemize}
-		\item
+		\pause \item
 			Full List: djangosites.com
 		\end{itemize}
 		\end{frame}
 		\begin{frame}
 			{NASA}
 			\begin{quotation}
-			After an extensive trade study, we selected Django as the ﬁrst and primary application environment for the Nebula Cloud.
+			   After an extensive trade study, we selected Django ...
+   				as the first and primary application environment for
+      			the Nebula Cloud.
 			\end{quotation} 
 		\end{frame}
 	\subsection{Common Enterprise Hurdles}
 		\begin{frame}
-			{Multiple Databases}
-		\end{frame}
-		\begin{frame}
-			{Dynamic settings infrastructure}
-		\end{frame}
-		\begin{frame}
-			{Tools}
+			{Enterprise Adoption Hurdles}
+		\begin{itemize}[<+-| alert@+>]
+			\item            
+			Multiple Databases
+			\item
+			Dynamic settings infrastructure
+			\item
+			Tools
+		\end{itemize}
 		\end{frame}
 	
 	
@@ -297,18 +360,20 @@
 			{About Me}
 			\begin{itemize}
 			\item
-			lakshman@agiliq.com
-			Agiliq Solutions http://www.agiliq.com/
-			Team of Expert Django Developers
-			@becomingGuru @agiliq
+			lakshman@agiliqsolutions.com, @becomingGuru
+			\item
+			Agiliq Solutions Formerly, Usware Technologies @agiliq
+			\item
+			Team of Expert Django Developers, Happy Clients
+			\img{mapnew.jpg}
 			\end{itemize}
 		\end{frame}
+		\imgslide{agiliqscreen.jpg}{http://www.agiliqsolutions.com/}
 		\begin{frame}
 			{Image Attributions}
+			\pycodetiny{sources.txt}
 		\end{frame}
-		\begin{frame}
-			?
-		\end{frame}
+		\imgslide{pony.jpg}{?}
 
 
 

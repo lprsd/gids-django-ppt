@@ -11,17 +11,3 @@ django_proxy
 compressor
 django_markup
 google_analytics
-view_cache_utils
-contact_form
-honeypot
-sugar
-quoteme
-django-staticfiles
-django-bitly
-django-twitter
-python-twitter
-django-wysiwyg
-django-slimmer
-django-cropper
-django-request
-
